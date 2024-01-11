@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="Dom.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="list">
+            <div class="card col-3 m-2">
+                <img src="ak1.jpg" class="card-img-top">
+                <div class="text-body">
+                    <h3 class="title" style="text-align: center;">Arun</h3>
+                    <p class="card-text" style="text-align: center;">Some of the quick Example and text to buiuld and
+                        avolothan</p>
+                    <button class="btn-btn-primary m-2" type="button">Java</button>
+                    <button class="btn-btn-primary m-2" type="button">JavaSript</button>
+                    <button class="btn-btn-primary m-2" type="button">OOPS</button>
+                    <button class="btn-btn-primary m-2" type="button">DSA</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const json = {
+            "user": [{ "profile": "ak1.jpg", "name": "Arun", "info": "some quick example to build on the card title and makeup", "tags": "java ,DSA ,OOPS, HTML" },
+            { "profile": "ak1.jpg", "name": "Kumar", "info": "some quick example to build on the card title and makeup", "tags": "java ,Bootstrap ,CSS, HTML" },
+            { "profile": "ak1.jpg", "name": "Mani", "info": "some quick example to build on the card title and makeup", "tags": "java ,DSA ,JavaScript, API" },
+            { "profile": "ak1.jpg", "name": "Venkat", "info": "some quick example to build on the card title and makeup", "tags": "java ,NODE ,React, JS" }
+            ]
+        }
+
+        let a=""
+        // for(let index =0;index<json.user.length;index++){
+        //     let person= json.user[index]
+        //     a = `${a} <div class="card col-3 m-2">
+        //         <img src="ak1.jpg" class="card-img-top">
+        //         <div class="text-body">
+        //             <h3 class="title" style="text-align: center;">Arun</h3>
+        //             <p class="card-text" style="text-align: center;">Some of the quick Example and text to buiuld and
+        //                 avolothan</p>
+        //             <button class="btn-btn-primary m-2" type="button">Java</button>
+        //             <button class="btn-btn-primary m-2" type="button">JavaSript</button>
+        //             <button class="btn-btn-primary m-2" type="button">OOPS</button>
+        //             <button class="btn-btn-primary m-2" type="button">DSA</button>
+        //         </div>
+        //     </div>`
+        // }
+
+        json.user.forEach(user=>{
+            a= `${a}<div class="card col-3 m-2">
+                <img src="ak1.jpg" class="card-img-top">
+                <div class="text-body">
+                    <h3 class="title" style="text-align: center;">${user.name}</h3>
+                    <p class="card-text" style="text-align: center;">${user.info}</p>
+                    <button class="btn-btn-primary m-2" type="button">JAVA</button>
+                    <button class="btn-btn-primary m-2" type="button">JavaSript</button>
+                    <button class="btn-btn-primary m-2" type="button">OOPS</button>
+                    <button class="btn-btn-primary m-2" type="button">DSA</button>
+                </div>
+            </div>`
+        })
+        document.getElementById("list").innerHTML=a
+    </script>
+
+</body>
+
+</html>
