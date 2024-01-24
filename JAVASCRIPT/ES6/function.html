@@ -1,0 +1,30 @@
+<script>
+    //JS
+    function add(a, b) {
+        c = a + b
+        return c;
+    }
+
+    // ES6 arrow function
+    sub = (a, b, c) => {
+        d = a - b - c
+        return c;
+    }
+
+    multiple = (a, b, c) => {
+        d = c * a * b
+        return d;
+    }
+
+    //ES6 - default value
+    const mod = (a, b = 2) => {
+        c = a % b
+        return c
+    }
+
+    console.log("add : " + add(3, 4))
+    console.log("add : " + sub(3, 4, 5))
+    console.log("multiple : " + multiple(3, 4, 4))
+    console.log("odd or even : " + mod(5))
+    console.log("odd or even : " + mod(2001))
+</script>

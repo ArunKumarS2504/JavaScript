@@ -1,0 +1,28 @@
+<script>
+    const add = (a,b,c)=>{
+        d= a+b+c
+        return c
+    }
+
+    const addArr = (a)=>{
+        d=0
+        a.forEach(element => {
+            d=d+element
+            
+        });
+        return d
+    }
+
+    const addSpread = (...a)=>{
+        d=0
+        a.forEach(element => {
+            d=d+element
+        });
+        return d
+    }
+
+    console.log("add :"+add(1,2,3))
+    console.log("add : "+ addArr([1,2,3,4,5]))
+    console.log("add :" + addSpread([38,35,4,3,4],[3,3,3,32],[3,3,3,3]))
+
+</script>

@@ -1,0 +1,33 @@
+<script>
+    class test{
+        constructor(){
+            
+        }
+
+        sub = (a,b) =>{
+
+            return a-b
+        }
+    }
+    class test1 extends test{
+        constructor(a,b){
+            super(a,b);
+            this.name = "Arun"
+            this.age="34"
+
+        }
+        add = (a,b)=>{
+            return a+b
+        }
+
+        getName = () =>{
+            return this.name
+        }
+    }
+
+    let a= 10
+    let b="Arun"
+    console.log(test.name)
+    console.log(test1.getName())
+
+</script>
